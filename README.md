@@ -1,9 +1,24 @@
+[![Build Status](https://travis-ci.org/home1-oss/oss-lib-webmvc.svg?branch=master)](https://travis-ci.org/home1-oss/oss-lib-webmvc)
+
+-----
+There are link issues on git service generated pages, see gitbook or maven site.
++ [gitbook](https://home1-oss.github.io/home1-oss-gitbook/release/docs/oss-lib-webmvc/)
++ [maven site](https://home1-oss.github.io/home1-oss/release/oss-lib-webmvc/index.html)
+-----
 
 # oss-lib-webmvc
+Webmvc components for spring-boot based web projects.
 
-对spring-webmvc进行一些配置, 提供支持web应用的小工具.
+Provide custom config and utils for `spring-webmvc`.
 
-对spring-webmvc进行的配置主要是在数据序列化反序列化方面, 在我们的微服务环境下, 各个服务之间主要通过RESTful风格的HTTP接口进行通信。
-如果每个服务对数据序列化和反序列化的细节不完全一致，会导致灾难。
+This library is mainly do serialization / deserialization configuration for spring-webmvc applications.
 
-如果用户在调用第三方API时需要定制的序列化/反序列化行为，请在专门的客户端上单独配置，不应破坏全局的设置。
+In our micro-service environment, the various services mainly communicate through the RESTful-style HTTP interface.
+If each service is not exactly the same as the serialization and deserialization of the data, it can cause a disaster.
+
+If the user requires custom serialization / deserialization when calling a third-party API, 
+configure it separately on a dedicated client and do not corrupt the global settings.
+
+## References
+
+[Pretty Print JSON Per Request With Spring MVC](https://dzone.com/articles/bozhos-tech-blog)
